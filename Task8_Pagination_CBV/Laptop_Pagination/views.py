@@ -10,8 +10,9 @@ def homepage(request):
 
 class ShowLaptops(ListView):
     queryset = Laptops.objects.all()
-    template_name = 'Laptops_list.html'
-    paginate_by = 3
+    # template_name = 'Laptops_list.html'   # menstion in case of overwrite template name
+    context_object_name='records'           # Default: object_list
+    paginate_by = 2
 
 
 
